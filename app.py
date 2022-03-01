@@ -10,9 +10,14 @@ import json
 
 global bot, TOKEN, URL
 TOKEN = os.environ.get("BOT_TOKEN")
+
 bot = telegram.Bot(token=TOKEN)
+
 url = urlparse(os.environ.get("REDIS_URL"))
+print(url)
 r = redis.Redis(host=url.hostname, port=url.port, username=url.username, password=url.password, ssl=True, ssl_cert_reqs=None)
+print("after the r setup")
+
 app = Flask(__name__)
 
 @app.route('/{}'.format(TOKEN), methods=['POST'])
