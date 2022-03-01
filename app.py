@@ -2,6 +2,7 @@ from queue import Empty
 import re
 from flask import Flask, request
 import telegram
+from urllib.parse import urlparse
 import redis
 import os
 import json
@@ -10,8 +11,8 @@ import json
 global bot, TOKEN, URL
 TOKEN = os.environ.get("BOT_TOKEN")
 bot = telegram.Bot(token=TOKEN)
-URL = os.environ.get("BOT_URL")
-r = redis.from_url(os.environ.get("REDIS_URL"))
+url = urlparse(os.environ.get("REDIS_URL"))
+r = redis.Redis(host=url.hostname, port=url.port, username=url.username, password=url.password, ssl=True, ssl_cert_reqs=None)
 app = Flask(__name__)
 
 @app.route('/{}'.format(TOKEN), methods=['POST'])
