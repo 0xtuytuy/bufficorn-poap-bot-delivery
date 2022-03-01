@@ -90,7 +90,7 @@ def set_webhook():
 
 @app.route('/')
 def index():
-    return '.'
+    return 'HELLO WORLD'
 
 @app.errorhandler(404)
 def handle_404(e):
