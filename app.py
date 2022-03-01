@@ -41,15 +41,24 @@ def respond():
     if "/start" in text:
         # print the welcoming message
         bot_welcome = """
-Welcome to Bufficorn ETH Denver POAP giveaway! 
+Hi friend! How are you? Did you meet the Bufficron at ETHDenver 2022? ❤️‍🩹
 
-POAP = proof of attendance protocol. 
+You can follow below steps to claim your Bufficron POAP badge ⬇️
 
-Claim your GiveAway by typing the command /claim
+Simply type the command /claim in the chat
 
-If you have any questions, before reaching out, RTFM: https://poap.xyz/faqs
+If you have further questions, before reaching out, RTFM: https://poap.xyz/faqs
 
-built by @OxTuytuy
+Coming back next year? Join the DENVER token economy: https://t.me/+qbDlrm9XIQEyMjhi  
+
+This POAP bot was created by @OxTuyTuy (alluo.io) and brought to you by Unit.Network - the Polkadot based platform for token economy. A new era of tokens.
+
+——
+Have you heard of Unit Masters? 
+
+It's the flagship program for blockchain literacy. From zero to hero in 6 weeks. Free of cost. 
+
+Enroll here: unitmasters.org
         """
         # registering the chat_id
         save_user(chat_id, update.message.from_user['username'], 'started', '')
