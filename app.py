@@ -80,7 +80,7 @@ Enroll here: unitmasters.org
                     text = re.sub(r"\W", "_", text)
                     text = text.replace('_claim_', '')
                     poapUrls = json.loads(r.get('poapUrls'))
-                    if "poapUrls" is None:
+                    if bool("poapUrls"):
                         bot.sendMessage(chat_id=chat_id, text="We have ran out, get in touch with the UNIT team or @Oxtuytuy on Telegram", reply_to_message_id=msg_id)
                         return 'ok'
                     else:
