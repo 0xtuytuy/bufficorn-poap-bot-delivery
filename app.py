@@ -43,22 +43,31 @@ def respond():
         bot_welcome = """
 Hi friend! How are you? Did you meet the Bufficron at ETHDenver 2022? ❤️‍🩹
 
-You can follow below steps to claim your Bufficron POAP badge ⬇️
+You can follow below steps to claim your Bufficron POAP badge ⬇️:
 
-Simply type the command /claim in the chat
+🤖Simply type the command /claim in the chat 🤖
 
-If you have further questions, before reaching out, RTFM: https://poap.xyz/faqs
+💭If you have further questions, before reaching out, RTFM: https://poap.xyz/faqs
 
-Coming back next year? Join the DENVER token economy: https://t.me/+qbDlrm9XIQEyMjhi  
+——
+Coming back to ETHDenver next year? Join the DENVER token economy: https://t.me/+qbDlrm9XIQEyMjhi  
+
+——
+
+Have you heard of Unit Masters? 
+
+It's the flagship education program for blockchain literacy. From zero to hero in 6 weeks. Free of cost. 
+
+Enroll here: unitmasters.org 
+
+——
 
 This POAP bot was created by @OxTuyTuy (alluo.io) and brought to you by Unit.Network - the Polkadot based platform for token economy. A new era of tokens.
 
+The POAP art was created by Chad Skeers. If you like your baby Bufficron, send a token of thanks to Chad: 0xCF9cA4a504985B88aaEFa1dE93bA091977de663D
+
 ——
-Have you heard of Unit Masters? 
-
-It's the flagship program for blockchain literacy. From zero to hero in 6 weeks. Free of cost. 
-
-Enroll here: unitmasters.org
+Peace. Love. Harmony. Give Bufficron a smile and a hug.
         """
         # registering the chat_id
         save_user(chat_id, update.message.from_user['username'], 'started', '')
